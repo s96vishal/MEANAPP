@@ -1,0 +1,14 @@
+
+mat-form-field,textarea{
+    width:100%
+}
+mat-spinner{
+    margin : auto;
+}
+
+.image-preview img{
+    height: 200px;
+    width:200px;
+    padding: 5px;
+    margin:2px;
+}

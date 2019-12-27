@@ -1,0 +1,25 @@
+<mat-card>
+        <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <form [formGroup]="form" (submit)="onAddedPost()" *ngIf="!isLoading">
+            <mat-form-field>
+                    <input 
+                    matInput 
+                    type="text" 
+                    placeholder="Post Title"
+                    [formControlName]="'title'"
+                    >
+                    <mat-error *ngIf="!form.get('title').valid && form.get('title').touched">Please enter a post title</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                        <textarea 
+                        matInput 
+                        rows="10"
+                        placeholder="Post Content"
+                        [formControlName]="'content'"
+                        ></textarea>
+                        <mat-error *ngIf="!form.get('content').valid && form.get('content').touched">Post content cannot be kept blank</mat-error>
+                </mat-form-field>
+                <button mat-raised-button color="primary" type="submit">Save Post</button>
+    </form>
+    
+</mat-card>

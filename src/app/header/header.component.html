@@ -1,0 +1,9 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" >
+    <a routerLink="/" class="navbar-brand text-warning">Post App</a>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item" *ngIf="userIsAuthenticated"><a routerLink="/create" routerLinkActive="active" mat-button class="nav-link text-white">New Post</a></li>
+        <li class="nav-item" *ngIf="!userIsAuthenticated"><a routerLink="/auth/login" routerLinkActive="active" mat-button class="nav-link text-white">Login</a></li>
+        <li class="nav-item" *ngIf="!userIsAuthenticated"><a routerLink="/auth/signup" routerLinkActive="active" mat-button class="nav-link text-white">Sign Up</a></li>
+        <li class="nav-item" *ngIf="userIsAuthenticated"><button class="btn text-white" (click)="onLogout()">Logout</button></li>
+    </ul>
+</nav>
