@@ -8,7 +8,7 @@ const userRoute=require("./routes/user");
 
 const app=express();
 console.log(process.env.MONGO_ATLAS_PW);
-mongoose.connect('mongodb+srv://vishal:cY0Iba24qkDzS2ZM@cluster0-p8476.mongodb.net/node-angular?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://<USERNAME>:<PASSWORD>@cluster0-p8476.mongodb.net/node-angular?retryWrites=true&w=majority')
         .then(()=>{
             console.log("COnnected Successfully");
         })
